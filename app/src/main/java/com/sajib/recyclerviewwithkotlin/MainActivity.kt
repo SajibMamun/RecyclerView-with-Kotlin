@@ -6,6 +6,7 @@ import com.sajib.recyclerviewwithkotlin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    lateinit var product
 
 
     val productlist = listOf<ProductDataclass>(
