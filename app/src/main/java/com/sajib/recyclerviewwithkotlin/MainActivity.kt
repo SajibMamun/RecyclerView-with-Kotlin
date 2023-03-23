@@ -6,7 +6,7 @@ import com.sajib.recyclerviewwithkotlin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    lateinit var product
+    lateinit var adapter:ProductAdapter
 
 
     val productlist = listOf<ProductDataclass>(
@@ -46,5 +46,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        adapter=ProductAdapter(this)
+        adapter.submitList(productlist)
+
+
+        binding.recyclerviewdid.adapter=adapter
+
     }
 }
